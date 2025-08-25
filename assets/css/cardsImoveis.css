@@ -1,0 +1,230 @@
+/* ======= CARDS DE IMÓVEIS ======= */
+.property-section {
+  padding: 60px 20px;
+  background: var(--Cinza4);
+}
+
+.property-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: clamp(1.8rem, 1.2rem + 1.5vw, 2.4rem);
+  color: var(--Cinza);
+  position: relative;
+  font-weight: 700;
+}
+
+.property-section h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: var(--VermelhoClaro);
+  margin: 3px auto 0 auto;
+  border-radius: 2px;
+  text-align: left;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.property-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* ======= CARD ======= */
+.property-card {
+  background: var(--White);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--Cinza5);
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.property-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* ======= IMAGEM ======= */
+.property-image {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--Cinza5);
+}
+
+.property-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.property-card:hover .property-image img {
+  transform: scale(1.05);
+}
+
+/* Tags sobre imagem */
+.tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: var(--White);
+  z-index: 2;
+}
+
+.tag.destaque {
+  background: #830103;
+}
+.tag.new {
+  background: #ff9800;
+  color: #2f1a00;
+}
+.tag.launch {
+  background: #4caf50;
+}
+
+.overlay-vendido {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(217, 83, 79, 0.9);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* ======= CORPO ======= */
+.property-body {
+  padding: 18px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.property-price {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--VermelhoClaro);
+}
+
+.property-price {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;   
+  gap: 4px;               
+  font-weight: 700;
+}
+
+.property-price .old-price {
+  text-decoration: line-through;
+  color: var(--Cinza3);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.property-type {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--VermelhoClaro);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.property-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--Cinza);
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.property-meta {
+  display: flex;
+  gap: 12px;
+  color: var(--Cinza3);
+  font-size: 0.95rem;
+  flex-wrap: wrap;
+}
+
+.property-meta i {
+  margin-right: 4px;
+  color: var(--VermelhoClaro);
+}
+
+.property-location {
+  font-size: 0.88rem;
+  color: var(--Cinza2);
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.property-location i {
+  font-size: 1rem;
+  color: var(--VermelhoClaro);
+}
+
+/* ======= AÇÕES ======= */
+.property-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.property-actions i {
+  font-size: 1.4rem;
+  color: var(--Cinza3);
+  cursor: pointer;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.property-actions i:hover {
+  color: var(--VermelhoClaro);
+  transform: scale(1.1);
+}
+
+/* ======= RESPONSIVO ======= */
+@media (min-width: 1200px) {
+  .property-card {
+    width: calc((100% - 75px) / 4);
+  }
+}
+
+@media (max-width: 1199px) {
+  .property-card {
+    width: calc((100% - 50px) / 3);
+  }
+}
+
+@media (max-width: 900px) {
+  .property-card {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+@media (max-width: 600px) {
+  .property-card {
+    width: 100%;
+  }
+}

@@ -1,0 +1,136 @@
+/* ======= BUSCA DE IMÓVEIS ======= */
+.hero-search {
+  width: 100%;
+  background: var(--White);
+  padding: 65px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.search-card {
+  background: var(--White);
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.24);
+}
+
+.search-header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.search-title h1 {
+  font-size: clamp(1.4rem, 1.1rem + 1.4vw, 2.2rem);
+  color: var(--Cinza);
+  margin: 0 0 5px;
+}
+
+.search-title p {
+  margin: 0;
+  color: var(--Cinza);
+}
+
+.search-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.search-tabs .tab {
+  padding: 8px 16px;
+  border: 1px solid var(--Cinza4);
+  border-radius: 8px;
+  background: var(--White);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-tabs .tab.active,
+.search-tabs .tab:hover {
+  background: var(--VermelhoEscuro);
+  color: var(--White);
+  border-color: var(--VermelhoEscuro);
+}
+
+.search-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-end;
+}
+
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 150px;
+}
+
+.filter-field label {
+  font-size: var(--Media);
+  margin-bottom: 4px;
+  color: var(--Cinza1);
+}
+
+.filter-field input,
+.filter-field select {
+  padding: 8px 10px;
+  border: 1px solid var(--Cinza4);
+  border-radius: 6px;
+  font-size: var(--Media);
+}
+
+.btn-search {
+  padding: 10px 20px;
+  background: var(--VermelhoEscuro);
+  color: var(--White);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.btn-search:hover {
+  opacity: 0.9;
+}
+
+/* ======= MOBILE ======= */
+@media (max-width: 400px) {
+  .search-filters {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .filter-field {
+    width: 100%;
+  }
+
+  .btn-search {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .search-header {
+    gap: 10px;
+  }
+
+  .search-title h1 {
+    font-size: 1.8rem;
+  }
+
+  .search-title p {
+    font-size: 0.95rem;
+  }
+
+  .search-tabs {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}

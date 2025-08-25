@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+
+    <!--========== BOXICONS ==========-->
+    <link href='https://unpkg.com/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+
+    <!--========== MAIN CSS ==========-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Simone Brito Corretora de Imóveis</title>
+</head>
+
+<body>
+    <!--========== HEADER ==========-->
+    <header class="header">
+        <div class="header_container">
+            <!-- Logo -->
+            <a href="index.html" class="header_logo">
+                <img src="assets/img/Simone_Brito.png" alt="Logo da Imobiliária">
+            </a>
+
+            <!-- Menu -->
+            <nav class="header_nav" id="nav-menu">
+                <!-- Botão Fechar -->
+                <div class="header_close" id="menu-close">
+                    <i class="bx bx-x"></i>
+                </div>
+
+                <ul class="header_menu">
+                    <li><a href="#comprar">Comprar</a></li>
+                    <li><a href="#alugar">Alugar</a></li>
+                    <li><a href="#lancamentos">Lançamentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botão CTA -->
+            <a href="#anunciar" class="header_btn">Anunciar Imóvel</a>
+
+            <!-- Menu Mobile -->
+            <div class="header_toggle" id="menu-toggle">
+                <i class="bx bx-menu"></i>
+            </div>
+        </div>
+    </header>
+
+    <!--========== BANNER ==========-->
+    <section class="banner">
+        <div class="swiper bannerSwiper">
+            <div class="swiper-wrapper">
+
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <img src="assets/img/banner_01.jpg" alt="Banner 1">
+                    <div class="banner-content">
+                        <h1 class="banner-title">Busque pelo seu imóvel ideal</h1>
+                        <h3 class="banner-subtitle">Os melhores imóveis em Sorocaba e região <p class="banner-desc">
+                                Conforto e qualidade de vida para sua família</p>
+                        </h3>
+
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <img src="assets/img/banner_02.jpg" alt="Banner 2">
+                    <div class="banner-content">
+                        <h1 class="banner-title">Busque pelo seu imóvel ideal</h1>
+                        <h3 class="banner-subtitle">Os melhores imóveis em Sorocaba e região <p class="banner-desc">
+                                Conforto e qualidade de vida para sua família</p>
+                        </h3>
+
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <img src="assets/img/banner_01.jpg" alt="Banner 3">
+                    <div class="banner-content">
+                        <h1 class="banner-title">Busque pelo seu imóvel ideal</h1>
+                        <h3 class="banner-subtitle">Os melhores imóveis em Sorocaba e região <p class="banner-desc">
+                                Conforto e qualidade de vida para sua família</p>
+                        </h3>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Bullets -->
+            <div class="swiper-pagination"></div>
+
+            <!-- Setas -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+
+    <!--========== HERO BUSCA ==========-->
+    <section class="hero-search">
+        <div class="hero-inner">
+            <div class="search-card" role="search" aria-label="Busca de imóveis">
+                <!-- Cabeçalho -->
+                <div class="search-header">
+                    <div class="search-title">
+                        <h1>Encontre o imóvel ideal</h1>
+                        <p>Casas, apartamentos e geminados para comprar ou alugar</p>
+                    </div>
+                    <div class="search-tabs" role="tablist" aria-label="Tipo de negociação">
+                        <button class="tab active" data-tab="comprar" role="tab" aria-selected="true">Comprar</button>
+                        <button class="tab" data-tab="alugar" role="tab" aria-selected="false">Alugar</button>
+                    </div>
+                </div>
+
+                <!-- FORMULÁRIO DE IMÓVEIS -->
+                <form id="searchForm" class="search-filters" action="#resultados" method="get">
+                    <div class="filter-field">
+                        <label for="tipo">Tipo</label>
+                        <select id="tipo" name="tipo">
+                            <option>Casa</option>
+                            <option>Apartamento</option>
+                            <option>Geminado</option>
+                            <option>Sobrado</option>
+                            <option>Terreno</option>
+                        </select>
+                    </div>
+                    <div class="filter-field">
+                        <label for="cidade">Cidade</label>
+                        <input id="cidade" name="cidade" list="cidades" placeholder="Ex.: Sorocaba" />
+                        <datalist id="cidades">
+                            <option value="Joinville"></option>
+                            <option value="Florianópolis"></option>
+                            <option value="Curitiba"></option>
+                            <option value="Balneário Camboriú"></option>
+                        </datalist>
+                    </div>
+                    <div class="filter-field">
+                        <label for="quartos">Quartos</label>
+                        <select id="quartos" name="quartos">
+                            <option value="">Qualquer</option>
+                            <option>1+</option>
+                            <option>2+</option>
+                            <option>3+</option>
+                            <option>4+</option>
+                        </select>
+                    </div>
+                    <div class="filter-field">
+                        <label for="min">Preço mín.</label>
+                        <input id="min" name="min" type="number" inputmode="numeric" placeholder="R$" />
+                    </div>
+                    <div class="filter-field">
+                        <label for="max">Preço máx.</label>
+                        <input id="max" name="max" type="number" inputmode="numeric" placeholder="R$" />
+                    </div>
+                    <input type="hidden" id="negociacao" name="negociacao" value="comprar" />
+                    <button class="btn-search" type="submit">Buscar imóveis</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!--========== INFORMAÇÕES ==========-->
+    <section class="perks-section" aria-label="Vantagens">
+        <div class="perks-grid">
+
+            <div class="perk-tile">
+                <div class="perk-info">
+                    <strong>Compra de Imóveis</strong>
+                    <p>Auxílio completo para você adquirir o imóvel perfeito.</p>
+                </div>
+            </div>
+
+            <div class="perk-tile">
+                <div class="perk-info">
+                    <strong>Venda de Imóveis</strong>
+                    <p>Encontre compradores de forma rápida e segura.</p>
+                </div>
+            </div>
+
+            <div class="perk-tile">
+                <div class="perk-info">
+                    <strong>Consultoria Especializada</strong>
+                    <p>Orientação em todas as etapas do processo imobiliário.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!--========== CARDS DE IMÓVEIS ==========-->
+    <section class="property-section" id="resultados" aria-label="Imóveis em destaque">
+        <div class="container">
+            <h2>Imóveis em destaque</h2>
+            <div class="property-grid">
+
+                <!-- Card 1 -->
+                <article class="property-card">
+                    <div class="property-image">
+                        <div class="tag destaque">Destaque</div>
+                        <a href="page/singlePageImovel_01.html">
+                            <img src="assets/img/imovel_01.jpg" alt="Apartamento" />
+                        </a>
+                    </div>
+
+                    <div class="property-body">
+                        <div class="property-price">R$ 1.395.000,00</div>
+                        <div class="property-type">Apartamento</div>
+                        <div class="property-title">
+                            Viva o melhor do Campolim no Avant Gardi – Construtora Planeta
+                        </div>
+                        <div class="property-meta">
+                            <span><i class="bx bx-bed"></i> 3</span>
+                            <span><i class="bx bx-bath"></i> </span>
+                            <span><i class="bx bx-car"></i> 2</span>
+                            <span><i class="bx bx-area"></i> 111m²</span>
+                        </div>
+                        <div class="property-location">
+                            <i class="bx bx-map"></i> Sorocaba - SP
+                        </div>
+                        <div class="property-actions">
+                            <i class="bx bx-share-alt" title="Compartilhar"></i>
+                            <a href="https://api.whatsapp.com/send?phone=5515981135775" target="_blank"><i
+                                    class="bx bxl-whatsapp" title="Enviar no WhatsApp"></i></a>
+                            <i class="bx bx-heart" title="Favoritar"></i>
+
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="property-card">
+                    <div class="property-image">
+                        <div class="tag destaque">Destaque</div>
+                        <a href="page/singlePageImovel_02.html">
+                            <img src="assets/img/imovel_02.jpg" alt="Apartamento" />
+                        </a>
+                    </div>
+
+                    <div class="property-body">
+                        <div class="property-price">R$ 683.000,00</div>
+                        <div class="property-type">Apartamento</div>
+                        <div class="property-title">
+                            Apartamento totalmente planejado, pronto para morar no Vivace
+                        </div>
+                        <div class="property-meta">
+                            <span><i class="bx bx-bed"></i> 3</span>
+                            <span><i class="bx bx-bath"></i> </span>
+                            <span><i class="bx bx-car"></i> 2</span>
+                            <span><i class="bx bx-area"></i> 80m²</span>
+                        </div>
+                        <div class="property-location">
+                            <i class="bx bx-map"></i> Sorocaba - SP
+                        </div>
+                        <div class="property-actions">
+                            <i class="bx bx-share-alt" title="Compartilhar"></i>
+                            <a href="https://api.whatsapp.com/send?phone=5515981135775" target="_blank"><i
+                                    class="bx bxl-whatsapp" title="Enviar no WhatsApp"></i></a>
+                            <i class="bx bx-heart" title="Favoritar"></i>
+
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="property-card">
+                    <div class="property-image">
+                        <div class="tag destaque">Destaque</div>
+                        <a href="page/singlePageImovel_03.html">
+                            <img src="assets/img/imovel_03.jpg" alt="Sobrado" />
+                        </a>
+                    </div>
+
+                    <div class="property-body">
+                        <div class="property-price">R$ 1.390.000,00</div>
+                        <div class="property-type">Sobrado</div>
+                        <div class="property-title">
+                            Sobrado à venda no Condomínio Residencial Morada das Artes
+                        </div>
+                        <div class="property-meta">
+                            <span><i class="bx bx-bed"></i> 3</span>
+                            <span><i class="bx bx-bath"></i> 3</span>
+                            <span><i class="bx bx-car"></i> 6</span>
+                            <span><i class="bx bx-area"></i> 310m²</span>
+                        </div>
+                        <div class="property-location">
+                            <i class="bx bx-map"></i> Zona Leste de Sorocaba, Bairro Jardim Novo Eldorado
+                        </div>
+                        <div class="property-actions">
+                            <i class="bx bx-share-alt" title="Compartilhar"></i>
+                            <a href="https://api.whatsapp.com/send?phone=5515981135775" target="_blank"><i
+                                    class="bx bxl-whatsapp" title="Enviar no WhatsApp"></i></a>
+                            <i class="bx bx-heart" title="Favoritar"></i>
+
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="property-card">
+                    <div class="property-image">
+                        <div class="tag destaque">Destaque</div>
+                        <a href="page/singlePageImovel_04.html">
+                            <img src="assets/img/imovel_04.jpg" alt="Casa" />
+                        </a>
+                    </div>
+
+                    <div class="property-body">
+                        <div class="property-price">
+                            <div class="old-price">R$ 2.690.000</div>
+                            <div>R$ 2.490.000</div>
+                        </div>
+
+                        <div class="property-type">Casa</div>
+                        <div class="property-title">
+                            Casa à venda em Alphaville 3 Projeto exclusivo Terezinha Lembo
+                        </div>
+                        <div class="property-meta">
+                            <span><i class="bx bx-bed"></i> 3</span>
+                            <span><i class="bx bx-bath"></i> 5</span>
+                            <span><i class="bx bx-car"></i> </span>
+                            <span><i class="bx bx-area"></i> 450,16m²</span>
+                        </div>
+                        <div class="property-location">
+                            <i class="bx bx-map"></i> Alphaville Sorocaba
+                        </div>
+                        <div class="property-actions">
+                            <i class="bx bx-share-alt" title="Compartilhar"></i>
+                            <a href="https://api.whatsapp.com/send?phone=5515981135775" target="_blank"><i
+                                    class="bx bxl-whatsapp" title="Enviar no WhatsApp"></i></a>
+                            <i class="bx bx-heart" title="Favoritar"></i>
+
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!--========== FOOTER ==========-->
+    <footer id="contato">
+        <div class="container footer-grid">
+            <!-- Logo e descrição -->
+            <div class="footer-brand">
+                <img src="assets/img/Simone Brito_02.png" alt="Simone Brito" class="footer-logo">
+                <div class="footer-brand-info">
+                    <strong class="agent-name">Simone Brito</strong>
+                    <p class="agent-role">Corretora de Imóveis</p>
+                    <p class="footer-desc">
+                        Conectando você ao imóvel perfeito com praticidade, segurança e transparência.
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- Navegação -->
+            <div class="footer-nav">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#comprar">Comprar</a></li>
+                    <li><a href="#alugar">Alugar</a></li>
+                    <li><a href="#lancamentos">Lançamentos</a></li>
+                    <li><a href="#anunciar">Anunciar</a></li>
+                </ul>
+            </div>
+
+            <!-- Contato -->
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <ul>
+                    <li><i class='bx bx-phone'></i> (15) 98113-5775</li>
+                    <li><i class='bx bx-envelope'></i> comercial@apaltopadrao.com</li>
+                    <li><i class='bx bx-map'></i> Sorocaba • SC</li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <form onsubmit="event.preventDefault(); alert('Inscrito com sucesso!');">
+                    <input type="email" placeholder="Seu e-mail" aria-label="Seu e-mail" />
+                    <button class="btn" type="submit">Assinar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Nota de rodapé -->
+        <div class="container foot-note">
+            © <span id="year">Simone Brito - </span>Corretora de Imóveis. Todos os direitos reservados.
+        </div>
+    </footer>
+
+
+    <!-- SwiperJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- main.js -->
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>

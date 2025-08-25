@@ -1,0 +1,120 @@
+/* ======= HEADER TOPO ======= */
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: var(--White);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.24);
+  z-index: 1000;
+}
+
+.header_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_logo img {
+  height: 42px;
+  display: block;
+}
+
+.header_menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.header_menu li a {
+  font-size: var(--Media);
+  font-weight: 600;
+  color: var(--Cinza1);
+  transition: color 0.3s ease;
+}
+
+.header_menu li a:hover {
+  color: var(--VermelhoClaro);
+}
+
+.header_btn {
+  background: linear-gradient(
+    135deg,
+    var(--VermelhoEscuro),
+    var(--VermelhoClaro)
+  );
+  color: var(--White);
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.header_btn:hover {
+  opacity: 0.9;
+}
+
+.header_nav {
+  position: relative;
+}
+
+/* Botão fechar no mobile */
+.header_close {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--VermelhoClaro);
+}
+
+.header_toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--VermelhoClaro);
+}
+
+/* ======= MOBILE ======= */
+@media (max-width: 768px) {
+  .header_btn {
+    display: none;
+  }
+
+  .header_nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: var(--White);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.24);
+    padding: 80px 20px;
+    transition: right 0.4s ease;
+  }
+
+  .header_nav.show {
+    right: 0;
+  }
+
+  .header_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .header_menu li a {
+    font-size: var(--Grande);
+  }
+
+  .header_toggle {
+    display: block;
+  }
+
+  .header_close {
+    display: block;
+  }
+}

@@ -1,0 +1,82 @@
+/*===== Google fonts =====*/
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+/*===== Boxicon =====*/
+@import url("https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css");
+
+/* ===== Font-awesome Import Link ===== */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+
+/*===== Componentes CSS =====*/
+@import "header.css";
+@import "banner.css";
+@import "buscaImoveis.css";
+@import "info.css";
+@import "cardsImoveis.css";
+@import "footer.css";
+
+@import "singlePage.css";
+
+/*===== Root =====*/
+:root {
+  --AzulClaro: #007cb1;
+  --AzulEscuro: #048fcb;
+  --VermelhoClaro: #a50306;
+  --VermelhoEscuro: #830103;
+
+  --Cinza: #333333;
+  --Cinza1: #323434;
+  --Cinza2: #717f7f;
+  --Cinza3: #a0a0a0;
+  --Cinza4: #e4e4e4;
+  --Cinza5: #f1f5f4;
+  --White: white;
+
+  --ExtraPequena: 8px;
+  --Pequena: 12px;
+  --ExtraMedia: 14px;
+  --Media: 16px;
+  --Grande: 20px;
+  --ExtraGrande: 35px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 10px;
+  background-color: #9c9c9c;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b8b8b8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9c9c9c;
+}
+
+.hidden {
+  display: none;
+}
+
+/*===== Reset CSS =====*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Source Sans Pro", sans-serif;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+body {
+  font-family: "Source", sans-serif;
+  font-weight: 400;
+  height: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: #e7e7e7;
+}

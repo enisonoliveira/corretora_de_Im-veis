@@ -1,0 +1,56 @@
+/* ======= INFO ======= */
+.perks-section {
+  padding: 70px 0;
+  background: #cccccc48;
+}
+
+.perks-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  padding: 20px;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.perk-tile {
+  flex: 1 1 300px;
+  min-width: 280px;
+  max-width: 650px;
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.perk-tile:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.perk-info strong {
+  font-size: 1.2rem;
+  color: var(--VermelhoClaro);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.perk-info p {
+  color: var(--Cinza);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ======= MOBILE ======= */
+@media (max-width: 768px) {
+  .perk-tile {
+    max-width: 100%;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
